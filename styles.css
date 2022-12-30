@@ -104,4 +104,8 @@
         flex-direction: column;
         gap: 3rem;
     }
+
+    .boton-div {
+        gap: 1.5rem;
+    }
 }
