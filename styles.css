@@ -1,0 +1,106 @@
+
+@import url(fuentes-colors.css);
+
+.main_container {
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TITLE - TEXT */
+
+.title-text {
+    margin-bottom: 3rem;
+}
+
+.title-principal {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-azul-text);
+    font-weight: 800;
+}
+
+.text-info {
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+/* NUMEROS GENERADOS */
+
+.numero-generado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.number-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-azul-text);
+}
+
+.numeros-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.fondo {
+    background-color: var(--color-naranja-claro);
+    color: var(--color-gris);
+
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* BOTON */
+
+.boton-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    margin-top: 4rem;
+}
+
+.button-number, .button-limpiar {
+    width: 220px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    color: var(--color-gris);
+    background: linear-gradient(310deg, #2329D6 20%, #ff3c00 80%);
+}
+
+
+/* MAX 500PX */
+
+@media (max-width: 500px){
+    .title-principal {
+        font-size: 1.8rem;
+    }
+
+    .main_container {
+        margin: 0 0.5rem;
+    }
+
+    .button-number, .button-limpiar {
+        width: 180px;
+    }
+}
