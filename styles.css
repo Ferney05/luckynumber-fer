@@ -93,14 +93,15 @@
 
 @media (max-width: 500px){
     .title-principal {
-        font-size: 1.8rem;
-    }
-
-    .main_container {
-        margin: 0 0.5rem;
+        font-size: 1.7rem;
     }
 
     .button-number, .button-limpiar {
-        width: 180px;
+        width: 165px;
+    }
+
+    .numero-generado {
+        flex-direction: column;
+        gap: 3rem;
     }
 }
