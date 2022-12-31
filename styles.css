@@ -64,6 +64,14 @@
     border-radius: 10px;
 }
 
+/* INFO BREVE */
+
+.chance-loteria {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: -1rem;
+}
+
 /* BOTON */
 
 .boton-div {

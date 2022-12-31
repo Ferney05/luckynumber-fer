@@ -13,6 +13,8 @@ const numeroThree3 = document.querySelector('.numero-three3');
 const botonLimpiar = document.querySelector('[dataButtonClean]');
 const botonGenerarNumber = document.querySelector('[dataNumeroButton]');
 
+const infoBreve = document.querySelector('.info-breve');
+
 // Números aleatorios 4 cifras
 
 const numAleatorio = (min, max) => {
@@ -65,12 +67,24 @@ const GenerateNumeros = () => {
     setInterval(() => {
         numeroThree3.innerText = `${numberThreeThree}`;
     }, 7000);
+
+    chanceLoteria();
 }
 
 // LIMPIAR - FUNCTION
 
 const Clean = () => {
     location.reload();
+}
+
+// GENERAR LOTERIA O CHANCE
+
+const chanceLoteria = () => {
+    const loterias = ['Dorado Mañana', 'Caribeña Día', 'Sinuano Día', 'Paisita Día', 'Chontico Día', 'El pijao de Oro', 'Dorado Tarde', 'Cafeterito Tarde', 'Paisita Noche', 'Chontico Noche', 'Cafeterito Noche', 'Dorado Noche', 'Motilon Noche', 'Caribeña Noche', 'Sinuano Noche'];
+    const longitud = loterias.length;
+    const opcionElegida = numAleatorio(0, longitud);
+
+    infoBreve.innerText = `Apueste los números anteriores en la lotería o chance: ${loterias[opcionElegida]}`;
 }
 
 botonGenerarNumber.addEventListener('click', GenerateNumeros);
