@@ -67,8 +67,6 @@ const GenerateNumeros = () => {
     setInterval(() => {
         numeroThree3.innerText = `${numberThreeThree}`;
     }, 7000);
-
-    chanceLoteria();
 }
 
 // LIMPIAR - FUNCTION
@@ -82,12 +80,19 @@ const Clean = () => {
 const chanceLoteria = () => {
     const loterias = ['Dorado Mañana', 'Caribeña Día', 'Sinuano Día', 'Paisita Día', 'Chontico Día', 'El pijao de Oro', 'Dorado Tarde', 'Cafeterito Tarde', 'Paisita Noche', 'Chontico Noche', 'Cafeterito Noche', 'Dorado Noche', 'Motilon Noche', 'Caribeña Noche', 'Sinuano Noche'];
     const longitud = loterias.length;
-    const opcionElegida = numAleatorio(0, longitud);
+    let opcionElegida = numAleatorio(0, longitud);
 
+    if(loterias[opcionElegida] == undefined){
+        opcionElegida = numAleatorio(0, 10);
+    }
+    
     infoBreve.innerText = `Apueste los números anteriores en la lotería o chance: ${loterias[opcionElegida]}`;
 }
 
-botonGenerarNumber.addEventListener('click', GenerateNumeros);
+botonGenerarNumber.addEventListener('click', () => {
+    GenerateNumeros();
+    chanceLoteria();
+});
 botonLimpiar.addEventListener('click', Clean);
 
 
