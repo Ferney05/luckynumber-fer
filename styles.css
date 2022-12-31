@@ -116,4 +116,8 @@
     .boton-div {
         gap: 1.5rem;
     }
+
+    .text-info {
+        margin: 0 0.3rem;
+    }
 }
