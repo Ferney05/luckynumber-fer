@@ -1,5 +1,11 @@
 
-// En el nombre poderoso de Jesucristo, que se haga tu voluntad mi Dios:)
+// ORACIÓN
+
+// ¡Dios mío, Todo Poderoso! Ante ti vengo a alabar y magnificar tu nombre, a decirte que seas mi Padre y guía. Te otorgo mi vida, mis metas y sueños, para que, por medio de tu gloria la suerte y el dinero lleguen a mí, la plenitud y felicidad que solo puede venir de tu gracia, en mi vida, familia, negocios, relaciones y profesión, renueva mi mundo y haz de mí lo que sea tu voluntad siempre.
+
+// Señor, no me dejes recorrer el camino solo. Guía mis pases con tu infinita sabiduría y poder, y dame más bien el privilegio de andar con tu majestuosa compañía, dándote siempre las gracias y aceptando con alegría lo que tengas deparado para mí. Te suplico Padre, que me des el impulso necesario para tener suerte y alcanzar mis metas monetarias.
+
+// Te agradezco eternamente por todas las veces que me has acompañado y dado lo mejor para mí, aunque a simple vista no me he dado cuenta de ello. Síguelo haciendo en mi día a día, porque en mi corazón tengo plena confianza de que me escuchas y que estás ahí, bendiciéndome para que me sonría la suerte, lo sé puesto que siempre estás atento a las necesidades de tus hijos. Te lo pido por los méritos de nuestro señor Jesucristo, Amén.
 
 const numeroOne4 = document.querySelector('.numero-one4');
 const numeroTwo4 = document.querySelector('.numero-two4');
@@ -78,21 +84,23 @@ const Clean = () => {
 // GENERAR LOTERIA O CHANCE
 
 const chanceLoteria = () => {
-    const loterias = ['Dorado Mañana', 'Caribeña Día', 'Sinuano Día', 'Paisita Día', 'Chontico Día', 'El pijao de Oro', 'Dorado Tarde', 'Cafeterito Tarde', 'Paisita Noche', 'Chontico Noche', 'Cafeterito Noche', 'Dorado Noche', 'Motilon Noche', 'Caribeña Noche', 'Sinuano Noche'];
+    const loterias = ['Dorado Mañana', 'Culona Día', 'Astro Sol', 'Caribeña Día', 'Sinuano Día', 'Paisita Día', 'Chontico Día', 'El pijao de Oro', 'Dorado Tarde', 'Cafeterito Tarde', 'Paisita Noche', 'Chontico Noche', 'Cafeterito Noche', 'Dorado Noche', 'Motilon Noche', 'Caribeña Noche', 'Sinuano Noche', 'Fantastica Noche', 'Culona Noche', 'Astro Luna'];
+
     const longitud = loterias.length;
     let opcionElegida = numAleatorio(0, longitud);
 
     if(loterias[opcionElegida] == undefined){
-        opcionElegida = numAleatorio(0, 10);
+        opcionElegida = numAleatorio(0, 17);
     }
     
-    infoBreve.innerText = `Apueste los números anteriores en la lotería o chance: ${loterias[opcionElegida]}`;
+    infoBreve.innerText = `Apueste los números anteriores en el chance: ${loterias[opcionElegida]}`;
 }
 
 botonGenerarNumber.addEventListener('click', () => {
     GenerateNumeros();
     chanceLoteria();
 });
+
 botonLimpiar.addEventListener('click', Clean);
 
 
