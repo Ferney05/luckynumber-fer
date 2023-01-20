@@ -19,7 +19,28 @@ const numeroThree3 = document.querySelector('.numero-three3');
 const botonLimpiar = document.querySelector('[dataButtonClean]');
 const botonGenerarNumber = document.querySelector('[dataNumeroButton]');
 
-const infoBreve = document.querySelector('.info-breve');
+const one = document.querySelector('.one');
+const two = document.querySelector('.two');
+const three = document.querySelector('.three');
+const four = document.querySelector('.four');
+const five = document.querySelector('.five');
+const six = document.querySelector('.six');
+const seven = document.querySelector('.seven');
+const eight = document.querySelector('.eight');
+const nine = document.querySelector('.nine');
+
+const hours1 = document.querySelector('.hours-1');
+const hours2 = document.querySelector('.hours-2');
+const hours3 = document.querySelector('.hours-3');
+const hours4 = document.querySelector('.hours-4');
+const hours5 = document.querySelector('.hours-5');
+const hours6 = document.querySelector('.hours-6');
+const hours7 = document.querySelector('.hours-7');
+const hours8 = document.querySelector('.hours-8');
+const hours9 = document.querySelector('.hours-9');
+
+
+const button = document.querySelector('.button');
 
 // Números aleatorios 4 cifras
 
@@ -81,27 +102,67 @@ const Clean = () => {
     location.reload();
 }
 
-// GENERAR LOTERIA O CHANCE
-
-const chanceLoteria = () => {
-    const loterias = ['Dorado Mañana', 'Culona Día', 'Astro Sol', 'Caribeña Día', 'Sinuano Día', 'Paisita Día', 'Chontico Día', 'El pijao de Oro', 'Dorado Tarde', 'Cafeterito Tarde', 'Paisita Noche', 'Chontico Noche', 'Cafeterito Noche', 'Dorado Noche', 'Motilon Noche', 'Caribeña Noche', 'Sinuano Noche', 'Fantastica Noche', 'Culona Noche', 'Astro Luna'];
-
-    const longitud = loterias.length;
-    let opcionElegida = numAleatorio(0, longitud);
-
-    if(loterias[opcionElegida] == undefined){
-        opcionElegida = numAleatorio(0, 17);
-    }
-    
-    infoBreve.innerText = `Apueste los números anteriores en el chance: ${loterias[opcionElegida]}`;
-}
-
 botonGenerarNumber.addEventListener('click', () => {
     GenerateNumeros();
-    chanceLoteria();
 });
 
 botonLimpiar.addEventListener('click', Clean);
 
+// NUMEROS CON POSIBILAD DE GANAR
 
+const content_back = [one, two, three, four, five, six, seven, eight, nine];
+let i_aleatorio = numAleatorio(0, content_back.length - 1);
 
+const numberSeleccionados = () => {
+
+    const hora = new Date();
+
+    if(i_aleatorio == 0){
+        one.style = 'background-color: #12b103';
+        hours1.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours1.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 1){
+        two.style = 'background-color: #12b103';
+        hours2.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours2.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 2){
+        three.style = 'background-color: #12b103';
+        hours3.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours3.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 3){
+        four.style = 'background-color: #12b103';
+        hours4.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours4.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 4){
+        five.style = 'background-color: #12b103';
+        hours5.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours5.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 5){
+        six.style = 'background-color: #12b103';
+        hours6.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours6.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 6){
+        seven.style = 'background-color: #12b103';
+        hours7.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours7.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 7){
+        eight.style = 'background-color: #12b103';
+        hours8.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours8.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    } else if(i_aleatorio == 8){
+        nine.style = 'background-color: #12b103';
+        hours9.style = 'display: block; font-size: .7rem; margin-top: 0.5rem; color: white';
+        hours9.innerText = `Seleccionado a las ${hora.getHours()}:${hora.getMinutes()}`;
+    }
+}
+
+button.addEventListener('click', numberSeleccionados);
+
+const suerteNum = document.querySelector('.suerte-num');
+const numsEstablecidos = document.querySelector('.nums-establecidos');
+const sectContent = document.querySelector('.sect-content');
+
+suerteNum.addEventListener('click', () => {
+    numsEstablecidos.style = 'display: none';
+    sectContent.style = 'display: block';
+})

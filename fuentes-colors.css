@@ -10,7 +10,7 @@
     --color-azul-text: #2329D6;
     --background-color-azul: #503ca8;
     --color-morado-claro: #5500c4;
-    --color-verde-claro: #15ff00;
+    --color-verde-claro: #19e007;
     --color-naranja-claro: #ff3c00;
     --color-negro-text: #000000;
     --color-transparente: #00000000;
@@ -26,5 +26,5 @@
 }
 
 body {
-    background-color: var(--color-gris);
+    background-color: var(--color-white);
 }

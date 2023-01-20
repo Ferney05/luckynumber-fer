@@ -1,0 +1,62 @@
+
+.title-texto {
+    margin-bottom: 2rem;
+}
+
+.title-nums {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color-azul-text);
+    font-weight: 800;
+}
+
+.texto-information {
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.container-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fondo-gray {
+    box-shadow: 5px 5px 5px 5px var(--color-gris);
+    padding: 0.5rem;
+}
+
+.numbers {
+    font-size: .9rem;
+}
+
+.boton-selection {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.button {
+    width: 220px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(310deg, #2329D6 20%, #ff3c00 80%);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.hours {
+    display: none;
+}
+
+.numeros-aleatorios {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.suerte-num {
+    color: var(--color-azul-text);
+}

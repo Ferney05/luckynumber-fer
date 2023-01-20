@@ -1,8 +1,14 @@
 
 @import url(fuentes-colors.css);
+@import url(nums-win.css);
+
+.sect-content {
+    display: none;
+}
 
 .main_container {
-    height: 600px;
+    height: auto;
+    margin: 4rem;
 
     display: flex;
     justify-content: center;
